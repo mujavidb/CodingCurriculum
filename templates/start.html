@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="text-center">Title</h1>
+        </div> 
+    </div>
+    <div class="col-lg-12">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." ng-model="name">
+            <span class="input-group-btn">
+                <button ng-click="go()"ng-disabled="name.length < 1" class="btn btn-primary" type="button">Go!</button>
+            </span>
+        </div><!-- /input-group -->
+    </div>
+</div>
