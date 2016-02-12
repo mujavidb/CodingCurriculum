@@ -1,8 +1,16 @@
-.row{
-    margin-bottom: 100px;
-}
 body{
-    max-width: 700px;
+    max-width: 800px;
     margin: 50px auto 100px auto;
 }
+.margin{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.myJumbo {
+    padding: 1em 1em 0.1em 1em;
+    
+}
 
+textarea{
+    resize: none;
+}

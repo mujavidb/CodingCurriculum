@@ -5,6 +5,10 @@ app.config(function($routeProvider){
         templateUrl: 'templates/story.html',
         controller: 'StoryController'
     })
+    .when('/challenge/1', {
+      templateUrl: 'templates/challenge1.html',
+        controller: 'ChallengeController'
+    })
     .otherwise({
         templateUrl: 'templates/start.html',
         controller: 'StartController'
@@ -20,4 +24,22 @@ app.controller('StartController', function($scope, $location, $localStorage){
 });
 app.controller('StoryController', function($scope, $localStorage){
     $scope.$storage = $localStorage;
+    $scope.choice = "";
+    $scope.setChoice = function(choice){
+        $scope.choice = choice;
+        console.log($scope.choice, $scope.choice === 'yes', $scope.choice === 'no');
+    }
+});
+app.controller('ChallengeController', function($scope, $localStorage){
+    $scope.$storage = $localStorage;
+    $scope.result = "";
+    $scope.test = function(){
+        var result = document.getElementById("output").textContent;
+        if (result == "Good Morning, Investigator Maria!\n"){
+            $scope.result = "Well Done"
+        }
+        else{
+           $scope.result = "Try again :(" 
+        }
+    }
 });
