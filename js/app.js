@@ -32,14 +32,29 @@ app.controller('StoryController', function($scope, $localStorage){
 });
 app.controller('ChallengeController', function($scope, $localStorage){
     $scope.$storage = $localStorage;
-    $scope.result = "";
-    $scope.test = function(){
-        var result = document.getElementById("output").textContent;
+    $scope.continue = false;
+    $scope.ch1 = function(){
+        var doc = document.getElementById("output");
+        var result = doc.textContent;
         if (result == "Good Morning, Investigator Maria!\n"){
-            $scope.result = "Well Done"
+            $scope.continue = true;
+            doc.innerHTML = doc.innerHTML + "Well Done!"
         }
         else{
-           $scope.result = "Try again :(" 
+            $scope.continue = false;
+            doc.innerHTML = doc.innerHTML + "Try again :(\n"
+        }
+    }
+    $scope.ch2 = function(){
+        var doc = document.getElementById("output");
+        var result = doc.textContent;
+        if (result == "Good Morning, Investigator Maria!\n"){
+            $scope.continue = true;
+            doc.innerHTML = doc.innerHTML + "Well Done!"
+        }
+        else{
+            $scope.continue = false;
+            doc.innerHTML = doc.innerHTML + "Try again :(\n"
         }
     }
 });

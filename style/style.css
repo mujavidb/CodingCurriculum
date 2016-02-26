@@ -1,6 +1,6 @@
 body{
     max-width: 800px;
-    margin: 50px auto 100px auto;
+    margin: auto;
 }
 .margin{
     margin-top: 5px;
@@ -13,4 +13,13 @@ body{
 
 textarea{
     resize: none;
+}
+
+.top{
+    position:fixed;
+    top: 0;
+}
+
+.cont{
+    width: 100%;
 }
