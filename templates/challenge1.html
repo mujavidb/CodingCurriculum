@@ -1,79 +1,79 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-8">
-            <h3>Okay, first things first Robo{{$storage.name}}, we need to see if you can communicate information to us. You can communicate with us in the Python language. You can do this by using the print command. Type print followed by what you want to say, in quotes, this is called the string.</h2>
-            <h3>For example:</h2>
+            <p>Okay, first things first Robo{{$storage.name}}, we need to see if you can communicate information to us. You can communicate with us in the Python language. You can do this by using the print command. Type print followed by what you want to say, in quotes, this is called the string.</p>
+            <p>For example:</p>
             <div class="jumbotron myJumbo">
                 <p>print "I understand this"</p>
             </div>
-            <h3>The above example shows the print command, followed by the string "I understand this". Together this will print:</h2>
+            <p>The above example shows the print command, followed by the string "I understand this". Together this will print:</p>
             <div class="jumbotron myJumbo">
                 <p>I understand this</p>
             </div>
             <h1>CHALLENGE 1</h1>
-            <h3>Print the following statement below, "Good Morning, Investigator Maria!".</h3>
+            <p>Print the following statement below, "Good Morning, Investigator Maria!".</p>
         </div>
         <div ng-show="continue" class="col-xs-8">
             <h1>PART 2</h1>
-            <h3>In python we can also print numbers. For example:</h3>
+            <p>In python we can also print numbers. For example:</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>print 10</p>
             </div>
-            <h3>In this example the print command is followed by the number 10. Notice how we did not use quotation marks around the number 10, this is because we want to print the number 10. The above example will print:</h3>
+            <p>In this example the print command is followed by the number 10. Notice how we did not use quotation marks around the number 10, this is because we want to print the number 10. The above example will print:</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>10</p>
             </div>
-            <h3>We can also print the output of a calculation, we will call these calculations expressions. For example:</h3>
+            <p>We can also print the output of a calculation, we will call these calculations expressions. For example:</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>print 10 * 5<br>
                 print 5 + 20 - 6<br>
                 print (30 / 5) * (2 + 7)</p>
             </div>
-            <h3>In this example, we have several print command followed by expressions (calculations). Python will figure out the result of an expression like 10 * 5 and output it using the print statement. The code above will print:</h3>
+            <p>In this example, we have several print command followed by expressions (calculations). Python will figure out the result of an expression like 10 * 5 and output it using the print statement. The code above will print:</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>50<br>
                 19<br>
                 54</p>
             </div>
-            <h3>It is important to remember that we didn't put the numbers or expressions in quotes, as quotes turn.</h3>
-            <h2>Variables!</h2>
-            <h3>Now that we have learnt to print content to the console, we can think about how to store information.A variable is like a container that can hold different values. We can declare a variable and insert something into it like below.</h3>
+            <p>It is important to remember that we didn't put the numbers or expressions in quotes, as quotes turn.</p>
+            <h2>Variables!</p>
+            <p>Now that we have learnt to print content to the console, we can think about how to store information.A variable is like a container that can hold different values. We can declare a variable and insert something into it like below.</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>detective = "Detective Maria"</p>
             </div>
-            <h3>The string "Detective Maria" is stored inside the variable detective. Let's look at another example:</h3>
+            <p>The string "Detective Maria" is stored inside the variable detective. Let's look at another example:</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>number_one = 22<br>
                     number_two = 33<br>
                     print number_one + number_two</p>
             </div>
-            <h3>In this example we declare two variables, number_one and number_two. Inside them we store the two values 22 and 33, respectively. With the print statement the expression number_one + number_two evaluates to 22 + 33. The result of this is then output.</h3>
+            <p>In this example we declare two variables, number_one and number_two. Inside them we store the two values 22 and 33, respectively. With the print statement the expression number_one + number_two evaluates to 22 + 33. The result of this is then output.</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>55</p>
             </div>
-            <h3>We can also store multiple values inside a variable, this type of variable is called a list. Let's look at the example below.</h3>
+            <p>We can also store multiple values inside a variable, this type of variable is called a list. Let's look at the example below.</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>numbers = [ 2, 5, 3, 6 , 8 ]</p>
             </div>
-            <h3>Here we have declared a variable called numbers and inside it we have used list notation [ ] to store 5 different integers. After each item in the list, we add a comma. This tells the list that we are adding a new item. If we print the list:</h3>
+            <p>Here we have declared a variable called numbers and inside it we have used list notation [ ] to store 5 different integers. After each item in the list, we add a comma. This tells the list that we are adding a new item. If we print the list:</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>print numbers</p>
             </div>
-            <h3>We get the output:</h3>
+            <p>We get the output:</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>[2, 5, 3, 6 , 8]</p>
             </div>
-            <h3>If we want to access a specific item inside the list, we can use list bracket notation to do this. We use the name of list variable and the order in which the item appears in the list, this is called the list index. For example:</h3>
+            <p>If we want to access a specific item inside the list, we can use list bracket notation to do this. We use the name of list variable and the order in which the item appears in the list, this is called the list index. For example:</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>print numbers[3]</p>
             </div>
-            <h3>Will output:</h3>
+            <p>Will output:</p>
             <div class="jumbotron myJumbo col-xs-12">
                 <p>6</p>
             </div>
-            <h3>Notice in the brackets we put the number 3, but instead the 4th number was output, which was 6. This is because list indices don't start at 1 instead they start at 0. By doing numbers[3] we are accessing the 4th item in the list.</h3>
+            <p>Notice in the brackets we put the number 3, but instead the 4th number was output, which was 6. This is because list indices don't start at 1 instead they start at 0. By doing numbers[3] we are accessing the 4th item in the list.</p>
             <h1>CHALLENGE 2</h1>
-            <h3>Create a list and store the numbers (11, 5, 4, -6, 8, 1) inside it. Then print the 4th element.</h3>
+            <p>Create a list and store the numbers (11, 5, 4, -6, 8, 1) inside it. Then print the 4th element.</p>
         </div>
         <div class="col-xs-4">
             <div class="top">

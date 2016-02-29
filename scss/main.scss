@@ -1,17 +1,18 @@
-body{
-    /*max-width: 1200px;*/
-    margin: auto;
+@import "bootstrap";
+
+p {
+	font-size: 18px;
 }
+
 .margin{
     margin-top: 5px;
     margin-bottom: 10px;
 }
 .myJumbo {
     padding: 1em 1em 0.1em 1em;
-    
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
