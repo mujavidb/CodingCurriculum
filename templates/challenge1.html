@@ -1,15 +1,5 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-4">
-            <div class="top">
-                <label>Your code:</label>
-                <textarea id="pythonCode" class="form-control margin" rows="3"></textarea>
-                <label>Result:</label>
-                <pre id="output2"></pre>
-                <button class="btn btn-primary col-xs-12" onclick="runit()" ng-click="ch2()">Compile!</button>
-                <br>
-            </div>
-        </div>
         <div class="col-xs-8">
             <h3>Okay, first things first Robo{{$storage.name}}, we need to see if you can communicate information to us. You can communicate with us in the Python language. You can do this by using the print command. Type print followed by what you want to say, in quotes, this is called the string.</h2>
             <h3>For example:</h2>
@@ -22,14 +12,6 @@
             </div>
             <h1>CHALLENGE 1</h1>
             <h3>Print the following statement below, "Good Morning, Investigator Maria!".</h3>
-            <div class="jumbotron">
-                <label>Your code:</label>
-                <textarea id="pythonCode" class="form-control margin" rows="3"></textarea>
-                <label>Result:</label>
-                <pre id="output"></pre>
-                <button class="btn btn-primary col-xs-12" onclick="runit()" ng-click="ch1()">Compile!</button>
-                <br>
-            </div>
         </div>
         <div ng-show="continue" class="col-xs-8">
             <h1>PART 2</h1>
@@ -92,12 +74,14 @@
             <h3>Notice in the brackets we put the number 3, but instead the 4th number was output, which was 6. This is because list indices don't start at 1 instead they start at 0. By doing numbers[3] we are accessing the 4th item in the list.</h3>
             <h1>CHALLENGE 2</h1>
             <h3>Create a list and store the numbers (11, 5, 4, -6, 8, 1) inside it. Then print the 4th element.</h3>
-            <div class="jumbotron">
+        </div>
+        <div class="col-xs-4">
+            <div class="top">
                 <label>Your code:</label>
                 <textarea id="pythonCode" class="form-control margin" rows="3"></textarea>
                 <label>Result:</label>
-                <pre id="output2"></pre>
-                <button class="btn btn-primary col-xs-12" onclick="runit()" ng-click="ch2()">Compile!</button>
+                <pre id="output"></pre>
+                <button class="btn btn-primary col-xs-12" onclick="runit()" ng-click="ch1()">Compile!</button>
                 <br>
             </div>
         </div>
