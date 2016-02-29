@@ -21,11 +21,17 @@
         } 
         function runit(){
             document.getElementById("output").innerHTML=""
-            var code = document.getElementById("pythonCode").value; 
+            var editor = ace.edit("pythonCode")
+            var code = editor.getValue(); 
+            console.log(code);
             Sk.configure({output:outf}); 
             eval(Sk.importMainWithBody("<stdin>",false,code)); 
         }
         </script>
+        <!-- Ace-->
+        <script type="text/javascript" src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-ace/ui-ace.js"></script>
     </head>
     <body ng-app="myApp">
         <div ng-view></div>

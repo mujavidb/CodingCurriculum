@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute', 'ngStorage'])
+var app = angular.module('myApp', ['ngRoute', 'ngStorage', 'ui.ace'])
 app.config(function($routeProvider){
     $routeProvider
     .when('/story', {
@@ -49,5 +49,8 @@ app.controller('ChallengeController', function($scope, $localStorage){
         else{
             doc.innerHTML = doc.innerHTML + "Try again :(\n"
         }
+    }
+    $scope.codeMirrorConf = {
+        mode: 'python'
     }
 });
