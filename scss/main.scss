@@ -1,0 +1,26 @@
+@import "bootstrap";
+
+p {
+	font-size: 18px;
+}
+
+textarea {
+    resize: none;
+}
+
+.code_area {
+	min-height: 300px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	// background-color: #222;
+	color: #EEE;
+	padding: 15px;
+}
+
+.code_area:focus {
+	box-shadow:none;
+	border:none;
+}
+.code_results {
+	color: rgb(13, 122, 215);
+}
