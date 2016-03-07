@@ -77,14 +77,14 @@
             </div>
         </div>
 
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-4 code_interactive">
             <h3>Your code:</h3>
-            <div ui-ace="{mode: 'python', theme: twilight}" id="pythonCode" class="form-control code_area"></div>
+            <div ui-ace="{mode: 'python', theme: 'monokai'}" id="pythonCode" class="form-control code_area"></div>
 
             <h3>Result:</h3>
             <pre id="output" class="code_results"></pre>
 
-            <button class="btn btn-primary col-xs-12" onclick="runit()" ng-click="ch1()">Run my code!</button>
+            <button class="btn btn-success btn-lg col-xs-12" onclick="runit()" ng-click="ch1()">Run my code!</button>
         </div>
     </div>
 </div>
