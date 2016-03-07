@@ -44,10 +44,10 @@ app.controller('ChallengeController', function($scope, $localStorage){
         }
         else if (result == "-6\n" && counter === 1){
             $scope.continue = true;
-            doc.innerHTML = doc.innerHTML + "Well Done!"
+            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done!"
         }
         else{
-            doc.innerHTML = doc.innerHTML + "Try again :(\n"
+            doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!"
         }
     }
     $scope.codeMirrorConf = {

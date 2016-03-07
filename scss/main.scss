@@ -12,9 +12,14 @@ textarea {
 	min-height: 300px;
 	margin-bottom: 20px;
 	border-radius: 4px;
-	// background-color: #222;
 	color: #EEE;
 	padding: 15px;
+}
+
+.code_interactive {
+	position: fixed;
+	right: 13%;
+	width: 390px;
 }
 
 .code_area:focus {
