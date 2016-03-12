@@ -8,6 +8,19 @@ textarea {
     resize: none;
 }
 
+@media (min-width: $screen-sm) {
+	.challenge_container {
+		overflow-y: scroll;
+		min-height: 600px;
+		height: calc(100vh - 70px);
+	}
+}
+
+.challenge_container {
+	.challenge_section:last-child {
+		margin-bottom: 100px;
+	}
+}
 .code_area {
 	min-height: 300px;
 	margin-bottom: 20px;
@@ -17,9 +30,6 @@ textarea {
 }
 
 .code_interactive {
-	position: fixed;
-	right: 13%;
-	width: 390px;
 }
 
 .code_area:focus {
