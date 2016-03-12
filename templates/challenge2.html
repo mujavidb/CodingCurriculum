@@ -6,113 +6,70 @@
     </div>
     <div class="row">
 
-        <div class="col-xs-12 col-sm-8">
+        <div class="col-xs-12 col-sm-8 challenge_container">
             <div class="row">
-                <div class="col-xs-12">
-                    <h2>Conditional Statements</h2>
-                    <p>
-                        Welldone!!! You nailed it. Now it’s time to learn something magical. You should be able to tell us what do you want us to do if a condition happens, for example if the TeamLag attacked us or stole some private information. You need to tell us what to do if a condition is true/false. That’s where Conditional Statements come in handy. Before introducing the Conditional Statements you need to know what are boolean expressions. A boolean expression is a statement which is either True or False. You can use below expressions to create a boolean statement:
-                    </p>
-                    <p>
-                        <code>></code>    greater<br><code><</code>    smaller<br><code>>=</code>    greater or equal<br><code><=</code>    smaller or equal<br><code>==</code>    equal<br><code>!=</code>    not equal<br>
-                    </p>
-                    <p>
-                        In each Conditional Statement you have to use a boolean statement as the condition. The first Conditional Statement which you need to learn is “If statement”, when you want to check whether a statement is true or false you have to write:
-                    </p>
+                <div class="col-xs-12 challenge_section">
+                    <h3>Conditional Statements</h3>
+
+                    <p>Well done, you nailed it! Now it’s time to learn something magical. You should be able to tell us what do you want us to do if a condition happens, for example if the TeamLag attacked us or stole some private information. You need to tell us what to do if a condition is true/false. That’s where Conditional Statements come in handy. Before introducing the Conditional Statements you need to know what are boolean expressions. A boolean expression is a statement which is either True or False. You can use below expressions to create a boolean statement:</p>
+
+                    <ul class="list-unstyled">
+                      <li><code>></code> greater than</li>
+                      <li><code><</code> less than</li>
+                      <li><code>>=</code> greater or equal</li>
+                      <li><code>>=</code> greater or equal</li>
+                      <li><code><=</code> smaller or equal</li>
+                      <li><code>==</code> equal</li>
+                      <li><code>!=</code> not equal</li>
+                    </ul>
+
+                    <p>In each Conditional Statement you have to use a boolean statement as the condition. The first Conditional Statement which you need to learn is “If statement”, when you want to check whether a statement is true or false you have to write:</p>
                     <pre>if condition:</pre>
+
                     <p>And then you have to write the statement you want us to do if the condition holds:</p>
-                    <pre>if condition:
-    statement1
-    statement2
-    …
-</pre>
+                    <pre>if condition:<br>&#09;statement1<br>&#09;statement2<br>&#09;…</pre>
+
                     <p>The second Conditional Statement is if/else, which comes in handy when you want us to something else when the if condition doesn’t hold:</p>
-                    <pre>if condition:
+                    <pre>if condition:<br>&#09;statement1<br>&#09;statement2<br>&#09;…<br>else:<br>&#09;statement1<br>&#09;statement2<br>&#09;…</pre>
 
-    statement1
-
-    statement2
-
-    …
-
-else:
-
-    statement1
-
-    statement2
-
-    …
-</pre>
                     <p>The third Conditional Statement is if/elif/else, you can use that when you have more than one condition that you want to check individually. You can have as many elifs as you need:</p>
-                    <pre>if condition:
+                    <pre>if condition:<br>&#09;statement1<br>&#09;statement2<br>&#09;…<br>elif condition:<br>&#09;statement1<br>&#09;statement2<br>&#09;…<br>else:<br>&#09;statement1<br>&#09;statement2<br>&#09;…</pre>
 
-    statement1
-
-    statement2
-
-    …
-
-elif condition:
-
-    statement1
-
-    statement2
-
-    …
-
-else:
-
-    statement1
-
-    statement2
-
-    …
-</pre>
                     <p>Here are some example which might help you get along with easier:</p>
-                    <pre>command = “”
+                    <pre>command = “”<br><br>if command == “Attack the enemies”:<br>&#09;return “Attack”<br>elif command == “Change The Secret Password”:<br>&#09;return “ChangePassword”<br>elif  command == “Set an Immediate Meeting”:<br>&#09;return “SetMeeting”<br>else:<br>&#09;return “EnterValidCommand”</pre>
 
+                    <p>Now that you have learned all about conditional statements, you are ready to help us win against TeamLag at this stage.</p>
+                    <p>Here is your mission:</p>
+                    <p>TeamLag has sent us a piece of code which may contain the secret word that we need. In order to find out first we have to compare the length of the code we have in mind and the one they sent us. How should we do that, can you help us?</p>
+                    <p>Hint: You need to use the “len” function in order to get the length of a variable, list, array. Example:</p>
+                    <pre>myString = “Martin”<br>print len(myString)<br>myList = [“Hacking”, “is”, “Cool!”]<br>print len(myList)</pre>
 
-if command == “Attack the enemies” :
-
-    return “Attack”
-
-elif command == “Change The Secret Password”:
-
-    return “ChangePassword”
-
-elif  command == “Set an Immediate Meeting”:
-
-    return “SetMeeting”
-
-else
-
-    return “EnterValidCommand”
-</pre>
-                    <p>Now that you have learned all about conditional statements, you are ready to help us win against TeamLag at this stage.<br>Here is your mission:<br>TeamLag has sent us a piece of code which may contain the secret word that we need. In order to find out first we have to compare the length of the code we have in mind and the one they sent us. How should we do that, can you help us ?<br>Hint: You need to use the “len” function in order to get the length of a variable, list, array. Example:</p>
-                    <pre>myString = “Martin”
-
-print len(myString)
-
-myList = [“Hacking”, “is”, “Cool!”]
-
-print len(myList)
-</pre>
                     <p>This will print:</p>
-                    <pre>6
-3</pre>
-                    <p>Yay!!!! You have learned all you need now. Time to help us defeat TeamLag !!!<br>As I told you before TeamLag has sent us a message which was encrypted. So we decrypted it and we got to a list of words which we think they may be the solutions to the enigma of defeating them. We already have anticipated some words and made a list with them. Now we need you to compare the length of the mentioned list with the lists  we got from our anticipation and if the length of any of those lists match the length of the encrypted message you have to print that list for us. Decrypted list :<br>['The','Bugs','are','in','the','System']<br><br>Anticipation lists:<br>['python', 'java']<br>['Bugs','main','HTML']<br>['The','Bugs','are','in','the','System']</p>
+                    <pre>6<br>3</pre>
+
+                    <p>Awesome! You have learned enough to take on TeamLag's next challenge!</p>
+
+                    <h2>Challenge 2</h2>
+
+                    <p>As I told you before TeamLag has sent us a message which was encrypted. So we decrypted it and we got to a list of words which we think they may be the solutions to the enigma of defeating them. We already have anticipated some words and made a list with them. Now we need you to compare the length of the mentioned list with the lists  we got from our anticipation and if the length of any of those lists match the length of the encrypted message you have to print that list for us.</p>
+                    <p>Decrypted list :</p>
+                    <pre>['The','Bugs','are','in','the','System']</pre>
+                    
+                    <p>Anticipated lists:</p>
+                    <pre>['python', 'java']<br>['Bugs','main','HTML']<br>['The','Bugs','are','in','the','System']</pre>
+
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-4 code_interactive">
             <h3>Your code:</h3>
-            <div ui-ace="{mode: 'python', theme: chaos}" id="pythonCode" class="form-control code_area"></div>
+            <div ui-ace="{mode: 'python', theme: 'monokai'}" id="pythonCode" class="form-control code_area"></div>
 
             <h3>Result:</h3>
             <pre id="output" class="code_results"></pre>
 
-            <button class="btn btn-primary col-xs-12" onclick="runit()" ng-click="ch2()">Run my code!</button>
+            <button class="btn btn-success btn-lg col-xs-12" onclick="runit()" ng-click="ch2()">Run my code!</button>
         </div>
     </div>
 </div>

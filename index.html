@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            CodingCurriculum
-        </title>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
-        <!-- Latest compiled and minified CSS -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
-        <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
-        <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script> 
-        <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script-->
-        <script src="https://code.jquery.com/jquery-1.9.0.min.js" type="text/javascript"></script>
-        <script src="js/skulpt/skulpt.min.js" type="text/javascript"></script>
-        <script src="js/skulpt/skulpt-stdlib.js" type="text/javascript"></script>
-        <script src="js/app.js"></script>
-        <script type="text/javascript"> 
-        function outf(text) { 
-            var mypre = document.getElementById("output"); 
-            mypre.innerHTML = mypre.innerHTML + text; 
-        } 
-        function runit(){
-            document.getElementById("output").innerHTML=""
-            var editor = ace.edit("pythonCode")
-            var code = editor.getValue(); 
-            console.log(code);
-            Sk.configure({output:outf}); 
-            eval(Sk.importMainWithBody("<stdin>",false,code)); 
-        }
-        </script>
-        <!-- Ace-->
-        <script type="text/javascript" src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
-        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-        <script type="text/javascript" src="bower_components/angular-ui-ace/ui-ace.js"></script>
-    </head>
-    <body ng-app="myApp">
-        <div ng-view></div>
-    </body>
+<head>
+    <title>CodingCurriculum</title>
+
+    <!-- SET ENCODING AND DEVICE CONFIGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width">
+    
+    <!-- PAGE META -->
+    <meta name="author" content="Mo, Marco, Matin and Mujavid">
+    <meta name="description" content="Short lessons on learning the essentials of python">
+
+    <!-- LATEST COMPILED AND MINIFIED CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- ANALYTICS TRACKING -->
+
+</head>
+<body ng-app="myApp">
+    <div ng-view></div>
+
+    <!-- ALL APPLICATION JS LOADS AT END OF BODY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="js/skulpt/skulpt.min.js" type="text/javascript"></script>
+    <script src="js/skulpt/skulpt-stdlib.js" type="text/javascript"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript"> 
+    function outf(text) { 
+        var mypre = document.getElementById("output"); 
+        mypre.innerHTML = mypre.innerHTML + text; 
+    } 
+    function runit(){
+        document.getElementById("output").innerHTML=""
+        var editor = ace.edit("pythonCode")
+        var code = editor.getValue(); 
+        console.log(code);
+        Sk.configure({output:outf}); 
+        eval(Sk.importMainWithBody("<stdin>",false,code)); 
+    }
+    </script>
+    <!-- Ace-->
+    <script type="text/javascript" src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-ace/ui-ace.js"></script>
+</body>
 </html>

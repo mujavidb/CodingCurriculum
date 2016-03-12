@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-p {
+p, ul, li {
 	font-size: 18px;
 }
 
@@ -18,7 +18,7 @@ textarea {
 
 .challenge_container {
 	.challenge_section:last-child {
-		margin-bottom: 100px;
+		padding-bottom: 100px;
 	}
 }
 .code_area {

@@ -43,17 +43,13 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
         var result = doc.textContent;
         if (result == "Good Morning, Investigator Maria!\n" && counter === 0){
             $scope.continue = true;
-            doc.innerHTML = doc.innerHTML + "Well Done!"
+            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done!"
             counter+=1;
         }
         else if (result == "-6\n" && counter === 1){
             $scope.continue = true;
-<<<<<<< HEAD
-            doc.innerHTML = doc.innerHTML + "Well Done!"
-            $location.path('/challenge/2');
-=======
             doc.innerHTML = doc.innerHTML + "\n---------\nWell Done!"
->>>>>>> 3c31f7572a4362fc347f9031c0510215d1e3e16d
+            $location.path('/challenge/2');
         }
         else{
             doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!"
@@ -67,7 +63,7 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
             doc.innerHTML = doc.innerHTML + "Well Done!"
         }
         else{
-            doc.innerHTML = doc.innerHTML + "Try again :(\n"
+            doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!\n"
         }
     }
 });
