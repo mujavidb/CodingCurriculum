@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Coding Curriculum: Lesson 3</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-8 challenge_container">
+            <div class="row">
+                <div class="col-xs-12 challenge_section">
+                    <h3>While Loops</h3>
+
+                    <p>While loops are very useful, when we want to iterate through a list , array, etc, or we want to repeat some expressions till we get our desired result they come in handy. We don’t want to waste anytime and we want to be as efficient as possible going against The Laggers.</p>
+
+                    <p>The way you write a while loop is pretty straight forward:</p>
+
+                    <pre>while(expression){<br>&#09;statement<br>}</pre>
+
+                    <p>The expression comes between the braces, the expression has to be boolean and the statements come between the curly brackets.</p>
+
+                    <p>Okay!!! now that you have learned all you need , let’s practice a bit.</p>
+
+                    <pre>String message = “Help is coming”<br>counter = 0;<br>while(messege[i] != c){<br>&#09;counter++;<br>}</pre>
+
+                    <p>Now we need your help {{$storage.name}} to move one step forward through defeating TeamLag.</p>
+                    
+                    <p>We have got several messages from the enemies that we need to decrypt, we need you to go through the list of messages and find the number of messages that we need to encrypt. We need to assign a smart detective for each message to work on.</p>
+
+                    <p>Here is the list we have got:</p>
+
+                    <pre>list = [“abcd”,”ytsgd”,”kshdjkhjs”,”acdhsf”,”yuosdh”]</pre>
+
+                    <h3>For Loops</h3>
+
+                    <p>When we write programs we often find that we have to repeat a bit of code over and over and over again as you have seen previously. This is where loops come in handy! Loops can often save a lot of time writing trivial code over and over again. I will be teaching you For loops in this lesson and for loops are very similar to what we covered in while loops as they both cover the same idea.</p>
+
+                    <p>The for loops was created since we realised we would want to do the same three things over again which are: creating loop counter variables, incrementing the variables by some amount and checking them that they are less than a certain value. This is why the for loops holds a place for all those three things and makes it very easy to work with!</p>
+
+                    <p>A structure of a for loop in Python:</p>
+
+                    <pre>for variable in sequence:<br>&#09;statements<br>else:<br>&#09;statements</pre>
+
+                    <p>A simple example of a for loop:</p>
+
+                    <pre>languages = ["Spanish", "English", "Persian", "Arabic"]<br>for x in languages:<br>&#09;print </pre>
+
+                    <p>The result of that program will be:</p>
+
+                    <pre>Spanish<br>English<br>Persian<br>Arabic</pre>
+
+                    <p>Another example is using the range function. The range function uses two arguments like thisRange(start, finish). start is the first number that is produced. finish is one larger than the last number. For instance:</p>
+                    
+                    <pre>oneToSix = range(1, 7)<br><br>for count in oneToSix:<br>&#09;print count</pre>
+
+                    <p>The output for this is:</p>
+
+                    <pre>1<br><br>2<br>3<br>4<br>5<br>6</pre>
+
+                    <p>Furthermore, you can also find a position of a character in a string or list/arrays using for loops. To do this you usually will need to create a variable counter which will be printed whenever the expression is met. Here’s how it works:</p>
+
+                    <p><strong>Input</strong></p>
+                    <pre>myString = "Position of a character"<br><br>count = 0<br>for c in myString:<br>&#09;if "r" == c: print count<br>&#09;count = count + 1</pre>
+
+                    <p><strong>Output</strong></p>
+                    <pre>17<br>22</pre>
+
+                    <p>As you can see the letter r is in positions 17 and 22, don’t forget when we’re counting we always start from 0!</p>
+
+                    <p>To be able to solve the next challenge you need to be able to use nested loops. Python allows to have one loop within another loop as many times as you would like. For example to be able to to create the design below you will need to use nested loops.</p>
+                    
+                    <p><strong>Input</strong></p>
+                    <pre>NUM_STEPS = 6<br>for rows in range(NUM_STEPS):<br>&#09;for columns in range (rows):<br>&#09;&#09;print "*",<br>&#09;print "*"</pre>
+
+                    <p><strong>Output</strong></p>
+                    <pre>*<br><br>**<br>***<br>****<br>*****<br>******</pre>
+
+                    <p>Also note the, after the print statement in line 4 means that you do not want to add a new line.</p>
+
+                    <h2>Challenge 1</h2>
+                    <p>This is the first scrambled message I have received from The laggers, however in the middle there is a missing piece. I need you {{$storage.name}} to create the pattern using what you have learnt so far.</p>
+
+                    <pre>******** ********<br>*******   *******<br>******     ******<br>*****       *****<br>****         ****<br>***           ***<br>**             **<br>*               *<br>*****************</pre>
+
+                </div>
+                <div class="col-xs-12 challenge_section" ng-show="continue">
+
+                    <h2>Challenge 2</h2>
+                    <p>This is the second scrambled message I have received. It is a little bit harder than the previous one but using your answer to the previous puzzle should help you figure out this one too, good luck!</p>
+
+                    <pre>*****************<br>*               *<br>**             **<br>****         ****<br>*****       *****<br>******     ******<br>*******   *******<br>******** ********<br>*******   *******<br>******     ******<br>*****       *****<br>****         ****<br>***           ***<br>**             **<br>*               *<br>*****************<br></pre>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 code_interactive">
+            <h3>Your code:</h3>
+            <div ui-ace="{mode: 'python', theme: 'monokai'}" id="pythonCode" class="form-control code_area"></div>
+
+            <h3>Result:</h3>
+            <pre id="output" class="code_results"></pre>
+
+            <button class="btn btn-success btn-lg col-xs-12" onclick="runit()" ng-click="ch3()">Run my code!</button>
+        </div>
+    </div>
+</div>

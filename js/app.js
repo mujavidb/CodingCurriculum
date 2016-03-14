@@ -13,6 +13,10 @@ app.config(function($routeProvider){
         templateUrl: 'templates/challenge2.html',
         controller: 'ChallengeController'
     })
+    .when('/challenge/3', {
+        templateUrl: 'templates/challenge3.html',
+        controller: 'ChallengeController'
+    })
     .otherwise({
         templateUrl: 'templates/start.html',
         controller: 'StartController'
@@ -43,15 +47,14 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
         var result = doc.textContent;
         if (result == "Good Morning, Investigator Maria!\n" && counter === 0){
             $scope.continue = true;
-            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done!"
+            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge 1 Completed!"
             counter+=1;
-        }
-        else if (result == "-6\n" && counter === 1){
+        } else if (result == "-6\n" && counter === 1){
             $scope.continue = true;
-            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done!"
+            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge 2 Completed!"
             $location.path('/challenge/2');
-        }
-        else{
+            counter = 0;
+        } else{
             doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!"
         }
     }
@@ -60,10 +63,30 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
         var result = doc.textContent;
         if (result == "Good Morning, Investigator Maria!\n"){
             $scope.continue = true;
-            doc.innerHTML = doc.innerHTML + "Well Done!"
-        }
-        else{
+            doc.innerHTML = doc.innerHTML + "Well Done, Challenge Completed!"
+            $location.path('/challenge/3');
+        } else{
             doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!\n"
+        }
+    }
+
+    $scope.ch3 = function(){
+        //FIX: Put correct values inside solution_one and solution_two
+        var doc = document.getElementById("output");
+        var result = doc.textContent;
+        var solution_one = "******** ********\n*******   *******\n******     ******\n*****       *****\n****         ****\n***           ***\n**             **\n*               *\n*****************\n";
+        var solution_two = "*****************\n*               *\n**             **\n****         ****\n*****       *****\n******     ******\n*******   *******\n******** ********\n*******   *******\n******     ******\n*****       *****\n****         ****\n***           ***\n**             **\n*               *\n*****************\n";
+        if (result == solution_one && counter === 0){
+            $scope.continue = true;
+            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge 1 Completed!"
+            counter+=1;
+        } else if (result == solution_two && counter === 1){
+            $scope.continue = true;
+            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge 2 Completed!"
+            $location.path('/challenge/4');
+            counter = 0;
+        } else{
+            doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!"
         }
     }
 });
