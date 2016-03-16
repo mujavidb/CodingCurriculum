@@ -61,7 +61,7 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
     $scope.ch2 = function(){
         var doc = document.getElementById("output");
         var result = doc.textContent;
-        if (result == "Good Morning, Investigator Maria!\n"){
+        if (result == "['The', 'Bugs', 'are', 'in', 'the', 'System']\n"){
             $scope.continue = true;
             doc.innerHTML = doc.innerHTML + "Well Done, Challenge Completed!"
             $location.path('/challenge/3');
@@ -74,18 +74,19 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
         //FIX: Put correct values inside solution_one and solution_two
         var doc = document.getElementById("output");
         var result = doc.textContent;
-        var solution_one = "******** ********\n*******   *******\n******     ******\n*****       *****\n****         ****\n***           ***\n**             **\n*               *\n*****************\n";
+        var solution_one = "        *        \n       ***       \n      *****      \n     *******     \n    *********    \n   ***********   \n  *************  \n *************** \n*****************\n\n";
         var solution_two = "*****************\n*               *\n**             **\n****         ****\n*****       *****\n******     ******\n*******   *******\n******** ********\n*******   *******\n******     ******\n*****       *****\n****         ****\n***           ***\n**             **\n*               *\n*****************\n";
-        if (result == solution_one && counter === 0){
+        if (result === solution_one && counter === 0){
             $scope.continue = true;
             doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge 1 Completed!"
             counter+=1;
-        } else if (result == solution_two && counter === 1){
+        } else if (result === solution_two && counter === 1){
             $scope.continue = true;
             doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge 2 Completed!"
             $location.path('/challenge/4');
             counter = 0;
         } else{
+			console.log(result, solution_one, result === solution_one );
             doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!"
         }
     }
