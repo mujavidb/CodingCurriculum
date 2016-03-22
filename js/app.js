@@ -17,6 +17,10 @@ app.config(function($routeProvider){
         templateUrl: 'templates/challenge3.html',
         controller: 'ChallengeController'
     })
+	.when('/challenge/4', {
+        templateUrl: 'templates/challenge4.html',
+        controller: 'ChallengeController'
+    })
     .otherwise({
         templateUrl: 'templates/start.html',
         controller: 'StartController'
@@ -88,6 +92,17 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
         } else{
 			console.log(result, solution_one, result === solution_one );
             doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!"
+        }
+    }
+	$scope.ch4 = function(){
+        var doc = document.getElementById("output");
+        var result = doc.textContent;
+        if (result == "['The', 'Bugs', 'are', 'in', 'the', 'System']\n"){
+            $scope.continue = true;
+            doc.innerHTML = doc.innerHTML + "Well Done, Challenge Completed!"
+            $location.path('/challenge/3');
+        } else{
+            doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!\n"
         }
     }
 });
