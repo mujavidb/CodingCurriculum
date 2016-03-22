@@ -4,6 +4,10 @@ p, ul, li {
 	font-size: 18px;
 }
 
+h1, h2, h3 {
+	color: white;
+}
+
 textarea {
     resize: none;
 }
@@ -37,5 +41,7 @@ textarea {
 	border:none;
 }
 .code_results {
-	color: rgb(13, 122, 215);
+	color: #40ae1e;
+	background-color: #1c2b36;
+	border-color: #464748;
 }

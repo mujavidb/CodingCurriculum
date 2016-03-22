@@ -11,9 +11,9 @@
                 <div class="col-xs-12 challenge_section">
                     <h3>Functions</h3>
 
-                    <p>Robo{{$storage.name}}, we have come a long way and you have learn very valuable and critical skills to help us defeating the Laggers. This is the final stage, If we can make it through building the cypher, we can finally encrypt the mystery of how to defeat TeamLag. One of the earliest encryption methods was to cyclically shift the letters of the alphabet by a fixed amount, an offset between 0 and 26.</p>
+                    <p>{{$storage.name}}, we have come a long way and you have learn very valuable and critical skills to help us defeating the Laggers. This is the final stage, If we can make it through building the cypher, we can finally encrypt the mystery of how to defeat TeamLag. One of the earliest encryption methods was to cyclically shift the letters of the alphabet by a fixed amount, an offset between 0 and 26.</p>
 
-                    <p>As you know creating ciphers is very important Robo{{$storage.name}}, they allow us to so only limit the amount of people knowing our messages and by understanding them you can learn to how to decode The Laggers messages and defeat the once and for all. </p>
+                    <p>As you know creating ciphers is very important {{$storage.name}}, they allow us to so only limit the amount of people knowing our messages and by understanding them you can learn to how to decode The Laggers messages and defeat the once and for all. </p>
 
                     <p>To complete your final challenge you will need to use all of your previous knowledge and combine them together to be successful in your adventure, but before we get stuck in I will need you to teach you to how to create functions.</p>
 
@@ -22,8 +22,8 @@
                     <p>So a few rules when you are defining a function:</p>
                     <ul>
 						<li>
-							Function blocks begin with the keyword def followed by the name you choose and parentheses. 
-							For example:<pre> def functionname( parameters ):</pre>
+							Function blocks begin with the keyword <code>def</code> followed by the name you choose and parentheses. For example:<br>
+                            <pre>def functionName(parameters):</pre>
 							Any input parameter or arguments should be placed inside the parenthesis and remember you can have more than one parameter inside. 
 						</li>
 						<li>
@@ -36,12 +36,10 @@
 							The statement return exits a function and literally “returns” the value you have decided back to the function. A return statement with no arguments is the same as return None. 
 						</li>
 					</ul>
-                    <p>for example a typical function body looks like the code below:</p>
 
-                    <pre>def printThisMessage(string):
-    # This program prints  a passed string into this function 
-    print string
-    return </pre>
+                    <p>A typical function body looks like the code below:</p>
+
+                    <pre>def printThisMessage(string):<br>&nbsp;&nbsp;&nbsp;&nbsp;# This program prints  a passed string into this function<br>&nbsp;&nbsp;&nbsp;&nbsp;print string</pre>
 
                     <h3>Calling a Function</h3>
 
@@ -49,19 +47,11 @@
 
                     <p>For example:</p>
 
-                    <pre>def printThisMessage(string):
-    # This program prints  a passed string into this function 
-    print string
-    return 
-
-# Now you can call printThisMessage function
-printThisMessage(“Hello this is my first message”)
-printThisMessage(“Hello this is my second message”)</pre>
+                    <pre>def printThisMessage(string):<br>&nbsp;&nbsp;&nbsp;&nbsp;# This program prints  a passed string into this function <br>&nbsp;&nbsp;&nbsp;&nbsp;print string<br><br># Now you can call printThisMessage function<br>printThisMessage(“Hello this is my first message”)<br>printThisMessage(“Hello this is my second message”)</pre>
 
                     <p>Output:</p>
 
-                    <pre>Hello this is my first message
-Hello this is my second message</pre>
+                    <pre>Hello this is my first message<br>Hello this is my second message</pre>
 
                     <h3>The return statement:</h3>
 					
@@ -69,13 +59,7 @@ Hello this is my second message</pre>
                     
                     <p>For example: </p>
 
-                    <pre>def sumOfNumbers(number1, number2):
-    total = number1 + number2
-    print “Inside the function the total is: “, total
-    return total
-
-#calling the sumOfNumbers function
-sumOfNumbers(10,20)</pre>
+                    <pre>def sumOfNumbers(number1, number2):<br>&nbsp;&nbsp;&nbsp;&nbsp;return number1 + number2<br><br>#calling the sumOfNumbers function<br>sumOfNumbers(10,20)</pre>
 
                     <p>Output:</p>
 
@@ -89,7 +73,7 @@ sumOfNumbers(10,20)</pre>
 
         <div class="col-xs-12 col-sm-4 code_interactive">
             <h3>Your code:</h3>
-            <div ui-ace="{mode: 'python', theme: 'monokai'}" id="pythonCode" class="form-control code_area"></div>
+            <div ui-ace="{mode: 'python', theme: 'solarized_dark'}" id="pythonCode" class="form-control code_area"></div>
 
             <h3>Result:</h3>
             <pre id="output" class="code_results"></pre>

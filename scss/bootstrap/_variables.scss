@@ -27,9 +27,12 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
-//** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
+// $body-bg:               #fff !default;
+// //** Global text color on `<body>`.
+// $text-color:            $gray-dark !default;
+
+$body-bg: #2A4251;
+$text-color: rgba(255,255,255,0.8);
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
@@ -834,15 +837,15 @@ $close-text-shadow:           0 1px 0 #fff !default;
 //
 //##
 
-$code-color:                  #c7254e !default;
-$code-bg:                     #f9f2f4 !default;
+$code-color:                  #27d25a !default;
+$code-bg:                     black !default;
 
 $kbd-color:                   #fff !default;
 $kbd-bg:                      #333 !default;
 
-$pre-bg:                      #f5f5f5 !default;
-$pre-color:                   $gray-dark !default;
-$pre-border-color:            #ccc !default;
+$pre-bg:                      rgb(62, 90, 111) !default;
+$pre-color:                   white !default;
+$pre-border-color:            #577687 !default;
 $pre-scrollable-max-height:   340px !default;
 
 
