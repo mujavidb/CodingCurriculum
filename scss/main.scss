@@ -12,6 +12,16 @@ textarea {
     resize: none;
 }
 
+.big_start {
+	input, button {
+		height:100px;
+		font-size: 4vw;
+	}
+	button {
+		padding: 6px 30px;
+	}
+}
+
 @media (min-width: $screen-sm) {
 	.challenge_container {
 		overflow-y: scroll;
