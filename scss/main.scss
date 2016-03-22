@@ -22,6 +22,10 @@ textarea {
 	}
 }
 
+.big_text p {
+	font-size: calc(18px + 1vw);
+}
+
 @media (min-width: $screen-sm) {
 	.challenge_container {
 		overflow-y: scroll;
