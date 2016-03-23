@@ -1,14 +1,14 @@
 <div class="container">
-    <div class="row">
+    <div class="row big_text" style="margin-top:20vh;">
         <h1 class="col-lg-12">Hi, I'm Maria and I'm an investigator.</h1>
-        <h2 class="col-lg-12"> TeamLag has carried out a series of dangerous hacks. Robo{{$storage.name}}, we need your help to solve these problems. They're very different from the problems I normal solve, they can only be solved by a coder.</h2>
-        <h2 class="col-lg-12">Robo{{$storage.name}}, only you can help us. We need your coding skills to solve the problems. Will you help us?</h2>
-        <div ng-show="choice === ''">
-            <button class="btn btn-primary col-xs-8 col-xs-offset-2 margin" ng-click="setChoice('yes')" ng-show="choice === ''">Yes!</button>
-            <button class="btn btn-primary col-xs-8 col-xs-offset-2 margin" ng-click="setChoice('no')" ng-show="choice === ''">No!</button>
+        <p class="col-lg-12"> TeamLag has carried out a series of dangerous hacks. Robo{{$storage.name}}, we need your help to solve these problems. They're very different from the problems I normal solve, they can only be solved by a coder.</p>
+        <p class="col-lg-12">Robo{{$storage.name}}, only you can help us. We need your coding skills to solve the problems. Will you help us?</p>
+        <div ng-show="choice === ''" style="margin-top:5vh;">
+            <button class="btn btn-primary col-xs-8 col-xs-offset-2" ng-click="setChoice('yes')" ng-show="choice === ''">Yes!</button>
+            <button class="btn btn-primary col-xs-8 col-xs-offset-2" ng-click="setChoice('no')" ng-show="choice === ''">No!</button>
         </div>
-        <h2 ng-show="choice === 'yes'" class="col-lg-12">Great! TeamLag have left us a few challenges which we need you to solve. After you complete a challenge, the next challenge will become available. I think if you complete all of the challenges, we will find the location of TeamLag.</h2>
-        <h2 ng-show="choice === 'no'" class="col-lg-12">I'm sorry but you must help us, TeamLag must be defeated. TeamLag have left us a few challenges which we need you to solve. After you complete a challenge, the next challenge will become available. I think if you complete all of the challenges, we will find the location of TeamLag.</h2>
+        <p ng-show="choice === 'yes'" class="col-lg-12">Great! TeamLag have left us a few challenges which we need you to solve. After you complete a challenge, the next challenge will become available. I think if you complete all of the challenges, we will find the location of TeamLag.</p>
+        <p ng-show="choice === 'no'" class="col-lg-12">I'm sorry but you must help us, TeamLag must be defeated. TeamLag have left us a few challenges which we need you to solve. After you complete a challenge, the next challenge will become available. I think if you complete all of the challenges, we will find the location of TeamLag.</p>
         <a href="#/challenge/1"><button class="margin btn btn-primary col-xs-10 col-xs-offset-1" ng-show="!(choice === '')">Start!</button></a>
     </div>
 </div>

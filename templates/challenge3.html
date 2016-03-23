@@ -15,13 +15,13 @@
 
                     <p>The way you write a while loop is pretty straight forward:</p>
 
-                    <pre>while(expression){<br>&#09;statement<br>}</pre>
+                    <pre>while(expression){<br>&nbsp;&nbsp;&nbsp;&nbsp;statement<br>}</pre>
 
                     <p>The expression comes between the braces, the expression has to be boolean and the statements come between the curly brackets.</p>
 
                     <p>Okay!!! now that you have learned all you need , let’s practice a bit.</p>
 
-                    <pre>String message = “Help is coming”<br>counter = 0;<br>while(messege[i] != c){<br>&#09;counter++;<br>}</pre>
+                    <pre>String message = “Help is coming”<br>counter = 0;<br>while(messege[i] != c){<br>&nbsp;&nbsp;&nbsp;&nbsp;counter++;<br>}</pre>
 
                     <p>Now we need your help {{$storage.name}} to move one step forward through defeating TeamLag.</p>
                     
@@ -39,11 +39,11 @@
 
                     <p>A structure of a for loop in Python:</p>
 
-                    <pre>for variable in sequence:<br>&#09;statements<br>else:<br>&#09;statements</pre>
+                    <pre>for variable in sequence:<br>&nbsp;&nbsp;&nbsp;&nbsp;statements<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;statements</pre>
 
                     <p>A simple example of a for loop:</p>
 
-                    <pre>languages = ["Spanish", "English", "Persian", "Arabic"]<br>for x in languages:<br>&#09;print </pre>
+                    <pre>languages = ["Spanish", "English", "Persian", "Arabic"]<br>for x in languages:<br>&nbsp;&nbsp;&nbsp;&nbsp;print </pre>
 
                     <p>The result of that program will be:</p>
 
@@ -51,7 +51,7 @@
 
                     <p>Another example is using the range function. The range function uses two arguments like thisRange(start, finish). start is the first number that is produced. finish is one larger than the last number. For instance:</p>
                     
-                    <pre>oneToSix = range(1, 7)<br><br>for count in oneToSix:<br>&#09;print count</pre>
+                    <pre>oneToSix = range(1, 7)<br><br>for count in oneToSix:<br>&nbsp;&nbsp;&nbsp;&nbsp;print count</pre>
 
                     <p>The output for this is:</p>
 
@@ -60,7 +60,7 @@
                     <p>Furthermore, you can also find a position of a character in a string or list/arrays using for loops. To do this you usually will need to create a variable counter which will be printed whenever the expression is met. Here’s how it works:</p>
 
                     <p><strong>Input</strong></p>
-                    <pre>myString = "Position of a character"<br><br>count = 0<br>for c in myString:<br>&#09;if "r" == c: print count<br>&#09;count = count + 1</pre>
+                    <pre>myString = "Position of a character"<br><br>count = 0<br>for c in myString:<br>&nbsp;&nbsp;&nbsp;&nbsp;if "r" == c: print count<br>&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1</pre>
 
                     <p><strong>Output</strong></p>
                     <pre>17<br>22</pre>
@@ -70,7 +70,11 @@
                     <p>To be able to solve the next challenge you need to be able to use nested loops. Python allows to have one loop within another loop as many times as you would like. For example to be able to to create the design below you will need to use nested loops.</p>
                     
                     <p><strong>Input</strong></p>
+<<<<<<< HEAD
+                    <pre>NUM_STEPS = 6<br>for rows in range(NUM_STEPS):<br>&nbsp;&nbsp;&nbsp;&nbsp;for columns in range (rows):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print "*",<br>&nbsp;&nbsp;&nbsp;&nbsp;print "*"</pre>
+=======
                     <pre>NUM_ROWS = 5<br>NUM_COLS = 5<br>for rows in range(NUM_ROW):<br>&#09;for columns in range (NUM_COLS):<br>&#09;&#09;print "*",<br>&#09;print ""</pre>
+>>>>>>> develop
 
                     <p><strong>Output</strong></p>
                     <pre>*****<br>*****<br>*****<br>*****<br>*****</pre>
