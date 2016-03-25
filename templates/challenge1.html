@@ -70,7 +70,44 @@
                     <pre>6</pre>
 
                     <p>Notice in the brackets we put the number 3, but instead the 4th number was output, which was 6. This is because list indices don't start at 1 instead they start at 0. By doing <code>numbers[3]</code> we are accessing the 4th item in the list.</p>
+					
+					<p>Robo{{$storage.name}}, as you saw lists are pretty awesome. In this part I want to teach you more about them cause they are extremely useful and we need you to be comfortable with them to defeat the TeamLag. 
+Lists are mutable. It means you can manipulate them in different ways which is the most exciting aspect about them.<br>
+Suppose we have a list of colors:</p>
+					
+					<pre>L = ['yellow', 'red', 'blue', 'green', 'black']</pre>
+					
+					<p>We can modify this list in different ways: we can append a new item using the function append, or insert in a specif position using the function insert.</p>
+					
+					<pre>L.append("pink")
+L.insert(0, "white")
+print L</pre>
+					<p>Output:</p>
+					
+					<pre>['white', 'black', 'blue', 'green', 'red', 'yellow', 'pink']</pre>
+					<p>We can take slice of the array: </p>
+					
+					<pre>print L[1:4]
+print L[:2]
+print L[2:]
+</pre>
+					
+					<p>Output:</p>
+					
+					<pre>['black', 'blue', 'green']
+['white', 'black']
+['green', 'red', 'yellow', 'pink']
+</pre>
+					
                     
+					<p>We can remove a specific element in the list using the function remove or remove the last one using the function pop</p>
+					
+					<pre>L.remove("white")
+L.pop()
+print L</pre>
+					<p>Output:</p>
+					
+					<pre>['black', 'blue', 'green', 'red', 'yellow']</pre>
                     <h2>Challenge 2</h2>
                     <p>Create a list and store the numbers (11, 5, 4, -6, 8, 1) inside it. Then print the 4th element.</p>
                     <p></p>
