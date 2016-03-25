@@ -69,7 +69,46 @@
 
                 </div>
             </div>
-        </div>
+        </div>  
+                    <h3>Challenge 1</h3>
+                    <p>We can cycle a list by a fixed amount by taking the given number of items off the front and adding them to the back  of the list. Write a function called rotate.
+                    </p>
+                    <p>For example rotate (6 ,"ABCDEFGHIJKLMN") returns "GHIJKLMNABCDEF". </p>
+                    <p>Make sure it returns an error message if the offset number is less than 0 or bigger than or equal to the length of the string. 
+                    After having created the function call it with 6 and “ABCDEFGHIJKLMNOPQRSTUVWXYZ” as parameters.</p>
+        
+                    <h3>Challenge 2</h3>
+                    <p>Assume keys are given in terms of upper case letters only. Use the function rotate to write a function called createKey that produces a string of 26 pairs of upper case letters which give the cipher key.</p>
+                    <p>createKey function will take an offset amount and returns a list of tuples where the first member of a pair is a member of the alphabet and the second is the member of the alphabet that the offset pairs the first one with.</p>
+        
+                    <p>For example a tuple can be like:</p>
+                    <br>myTuple = (2, a, bug)<br>
+                    <p>A list of Tuples would be like:</p>
+                    <br>myList = [(2, a),(3, b),(4, Lagger)]<br>
+                    
+                    <h4><strong>Hint</strong></h4>
+                    <p>What are Tuples in Python? </p>
+                    <p>The are pretty much the same as Lists except that once they are declared they can’t be changed. Also the data stored in tuples can be heterogeneous while the data stored in lists must be homogeneous.</p>
+        
+                    <h3>Challenge 3</h3>
+                    <p>Now we need you {{$storage.name}} to write a function lookUp which gets the first char in a key and finds a pair in a key by its first character and returns its second character. If the character is not in the key it should return it unchanged</p>
+                    <p>lookUp(firstChar)</p>
+        
+                    <h3>Challenge 4</h3>
+                    <p>Write a function encipher which takes two arguments, an offset and a single uppercase character  and encrypts it using the given offset.</p>
+                    <p>For example encipher( 5, C) returns H.</p>
+        
+                    <h3>Challenge 5</h3>
+                    <p>Text encrypted by a cipher is conventionally written in uppercase and without punctuation.</p>
+                    <p>Write a function normalise which gets a string of characters as an argument and converts the string to uppercase, removing spaces and all characters other than letters and digits and returns it</p>
+                    
+        
+                    <h3>Challenge 6</h3>
+                    <p>Write a function encipherString which takes two arguments an offset and a string of characters and what is does is, it normalises the string and then encrypts it and print the final string on the console.</p>
+                    <p>For example:</p>
+                    <p>encipherString 18 "We move at 1500 hours" becomes:</p>
+                    <p>"OWEGNWSL1500ZGMJK"</p>
+        
 
         <div class="col-xs-12 col-sm-4 code_interactive">
             <h3>Your code:</h3>
