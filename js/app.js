@@ -78,18 +78,19 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
         //FIX: Put correct values inside solution_one and solution_two
         var doc = document.getElementById("output");
         var result = doc.textContent;
-        var solution_one = "        *        \n       ***       \n      *****      \n     *******     \n    *********    \n   ***********   \n  *************  \n *************** \n*****************\n\n";
+        var solution_one = "* \n* * \n* * * \n* * * * \n* * * * * \n* * * * * * \n* * * * * * * \n";
         var solution_two = "*****************\n*               *\n**             **\n****         ****\n*****       *****\n******     ******\n*******   *******\n******** ********\n*******   *******\n******     ******\n*****       *****\n****         ****\n***           ***\n**             **\n*               *\n*****************\n";
         if (result === solution_one && counter === 0){
             $scope.continue = true;
             doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge 1 Completed!"
-            counter+=1;
-        } else if (result === solution_two && counter === 1){
+			$location.path('/challenge/4');
+            //counter+=1;
+        } /*else if (result === solution_two && counter === 1){
             $scope.continue = true;
             doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge 2 Completed!"
             $location.path('/challenge/4');
             counter = 0;
-        } else{
+        }*/ else{
 			console.log(result, solution_one, result === solution_one );
             doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!"
         }
