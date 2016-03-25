@@ -21,6 +21,10 @@ app.config(function($routeProvider){
         templateUrl: 'templates/challenge4.html',
         controller: 'ChallengeController'
     })
+	.when('/about', {
+		templateUrl: 'templates/about.html',
+		controller: ''
+	})
     .otherwise({
         templateUrl: 'templates/start.html',
         controller: 'StartController'
