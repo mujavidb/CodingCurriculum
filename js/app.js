@@ -49,6 +49,7 @@ app.controller('StoryController', function($scope, $localStorage){
 app.controller('ChallengeController', function($scope, $localStorage, $location){
     $scope.$storage = $localStorage;
     $scope.continue = false;
+    $scope.counter = 1;
     var counter = 0;
     $scope.ch1 = function(){
         var doc = document.getElementById("output");
@@ -86,7 +87,7 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
         var solution_two = "*****************\n*               *\n**             **\n****         ****\n*****       *****\n******     ******\n*******   *******\n******** ********\n*******   *******\n******     ******\n*****       *****\n****         ****\n***           ***\n**             **\n*               *\n*****************\n";
         if (result === solution_one && counter === 0){
             $scope.continue = true;
-            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge 1 Completed!"
+            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge Completed!"
 			$location.path('/challenge/4');
             //counter+=1;
         } /*else if (result === solution_two && counter === 1){
@@ -96,18 +97,38 @@ app.controller('ChallengeController', function($scope, $localStorage, $location)
             counter = 0;
         }*/ else{
 			console.log(result, solution_one, result === solution_one );
-            doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!"
+            doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!";
         }
     }
 	$scope.ch4 = function(){
         var doc = document.getElementById("output");
         var result = doc.textContent;
-        if (result == "['The', 'Bugs', 'are', 'in', 'the', 'System']\n"){
-            $scope.continue = true;
-            doc.innerHTML = doc.innerHTML + "Well Done, Challenge Completed!"
-            $location.path('/challenge/3');
-        } else{
-            doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!\n"
+        if (result === "GHIJKLMNOPQRSTUVWXYZABCDEF\n" && $scope.counter === 1){
+            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge Completed!";
+			$scope.counter += 1;
+        } else if(result === "[('A', 'I'), ('B', 'J'), ('C', 'K'), ('D', 'L'), ('E', 'M'), ('F', 'N'), ('G', 'O'), ('H', 'P'), ('I', 'Q'), ('J', 'R'), ('K', 'S'), ('L', 'T'), ('M', 'U'), ('N', 'V'), ('O', 'W'), ('P', 'X'), ('Q', 'Y'), ('R', 'Z'), ('S', 'A'), ('T', 'B'), ('U', 'C'), ('V', 'D'), ('W', 'E'), ('X', 'F'), ('Y', 'G'), ('Z', 'H')]\n" && $scope.counter === 2){
+            doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge Completed!";
+			$scope.counter += 1;
         }
+		else if(result === "H" && $scope.counter === 3){
+			doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge Completed!";
+			$scope.counter += 1;
+		}
+		else if(result === "J" && $scope.counter === 4){
+			doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge Completed!";
+			$scope.counter += 1;
+		}
+		else if(result === "HELLOMYNAMEISMARIA" && $scope.counter === 5){
+			doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge Completed!";
+			$scope.counter += 1;
+		}
+		else if(result === "NKRRUNUCGWKEUA" && $scope.counter ===6){
+			doc.innerHTML = doc.innerHTML + "\n---------\nWell Done, Challenge Completed!";
+			$scope.counter += 1;
+		}
+		else{
+			doc.innerHTML = doc.innerHTML + "\n---------\nTry Again!";
+		}
+		
     }
 });
